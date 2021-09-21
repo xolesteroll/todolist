@@ -21,10 +21,10 @@ function App() {
   }
 
   const deleteTodo = (e) => {
-    const id = e.target.id
+    const id = e.target.getAttribute('data-id')
     const filteredTodos = todos.filter(el => +el.id !== +id)
     setTodos(filteredTodos)
-    console.log(e.target)
+    console.log(e.target.getAttribute('data-id'))
   }
 
   return (
