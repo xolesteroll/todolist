@@ -1,0 +1,33 @@
+.list {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px 15px;
+    list-style: none;
+    text-align: left;
+}
+
+.item {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.item:hover:before {
+    display: block;
+    background-color: red;
+}
+
+.item:before {
+    content: "delete todo";
+    position: absolute;
+    transition: background-color 0.3s;
+    z-index: -1;
+    right: 0;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100%;
+    text-align: right;
+    display: none;
+}
+
